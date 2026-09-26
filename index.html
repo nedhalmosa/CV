@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nedhal Mosa Almarhoun - Portfolio</title>
-<!-- خطوط جوجل -->
+<title>Nedhal Mosa Almarhoun - Professional Portfolio</title>
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-/* إعدادات عامة */
+/* General Reset & Settings */
 * {
 margin: 0;
 padding: 0;
@@ -22,7 +21,8 @@ color: #333;
 line-height: 1.6;
 }
 a { text-decoration: none; color: inherit; }
-/* القائمة العلوية الثابتة */
+
+/* Sticky Navigation Bar */
 header.navbar {
 position: fixed;
 top: 0;
@@ -39,6 +39,7 @@ padding: 15px 5%;
 font-size: 1.5rem;
 font-weight: 700;
 color: #0056b3;
+letter-spacing: 1px;
 }
 .nav-links {
 list-style: none;
@@ -54,7 +55,8 @@ transition: color 0.3s;
 .nav-links li a:hover {
 color: #0056b3;
 }
-/* زر القائمة للجوال */
+
+/* Mobile Hamburger Menu */
 .menu-toggle {
 display: none;
 font-size: 1.8rem;
@@ -62,21 +64,25 @@ cursor: pointer;
 color: #333;
 }
 
-/* تنسيق الأقسام */
+/* Sections Layout */
 section {
-padding: 100px 5% 50px; /* الـ 100px عشان القائمة العلوية ما تغطي المحتوى */
+padding: 100px 5% 60px;
 min-height: 100vh;
 }
 .section-title {
-font-size: 2rem;
+font-size: 2.2rem;
 color: #0056b3;
-margin-bottom: 30px;
+margin-bottom: 40px;
 text-align: center;
-border-bottom: 2px solid #e0e0e0;
+border-bottom: 3px solid #e0e0e0;
 padding-bottom: 10px;
+display: inline-block;
+left: 50%;
+position: relative;
+transform: translateX(-50%);
 }
 
-/* الصفحة الرئيسية - البروفايل */
+/* Home / Profile Section */
 #home {
 display: flex;
 flex-direction: column;
@@ -85,58 +91,70 @@ justify-content: center;
 text-align: center;
 background: linear-gradient(135deg, #0056b3, #003d82);
 color: white;
+padding-top: 120px;
 }
-#home h1 { font-size: 3rem; margin-bottom: 10px; }
-#home h2 { font-size: 1.5rem; font-weight: 300; margin-bottom: 20px; opacity: 0.9; }
-#home p { max-width: 700px; margin-bottom: 40px; font-size: 1.1rem; }
+#home h1 { font-size: 3.5rem; margin-bottom: 10px; font-weight: 700; }
+#home h2 { font-size: 1.5rem; font-weight: 300; margin-bottom: 25px; opacity: 0.9; }
+#home p { max-width: 750px; margin-bottom: 50px; font-size: 1.1rem; line-height: 1.8; }
 
-/* البطاقات الأربع */
+/* The 4 Clickable Cards */
 .cards-container {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 gap: 20px;
 width: 100%;
-max-width: 1000px;
+max-width: 1100px;
 }
 .card {
 background: white;
 color: #333;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-transition: transform 0.3s;
+padding: 25px 20px;
+border-radius: 12px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 cursor: pointer;
+text-align: center;
 }
-.card:hover { transform: translateY(-5px); }
-.card h3 { color: #0056b3; font-size: 1.8rem; margin-bottom: 5px; }
-.card p { font-size: 0.9rem; font-weight: 600; margin:0;}
+.card:hover {
+transform: translateY(-8px);
+box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+.card h3 { color: #0056b3; font-size: 1.8rem; margin-bottom: 10px; font-weight: 700; }
+.card p { font-size: 1rem; font-weight: 600; margin: 0; color: #555; }
 
-/* تنسيق المحتوى داخل الأقسام */
+/* Content Boxes (Inside Sections) */
 .content-box {
 background: white;
-padding: 30px;
-border-radius: 8px;
-box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-margin-bottom: 20px;
+padding: 35px;
+border-radius: 10px;
+box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+margin-bottom: 25px;
+max-width: 1000px;
+margin-left: auto;
+margin-right: auto;
 }
-.content-box h3 { margin-bottom: 15px; color: #333; }
-ul.custom-list { list-style-position: inside; margin-bottom: 15px; padding-left: 10px;}
-ul.custom-list li { margin-bottom: 8px; }
+.content-box h3 { margin-bottom: 15px; color: #0056b3; font-size: 1.4rem; }
+.content-box p { font-size: 1.05rem; color: #444; margin-bottom: 15px; }
+ul.custom-list { list-style-type: square; margin-bottom: 15px; padding-left: 20px;}
+ul.custom-list li { margin-bottom: 10px; color: #444; font-size: 1.05rem; }
 
-/* أزرار التواصل وتحميل السيرة */
+/* Buttons */
 .btn {
 display: inline-block;
-padding: 10px 25px;
+padding: 12px 30px;
 background: #0056b3;
 color: white;
-border-radius: 5px;
+border-radius: 6px;
 font-weight: 600;
-margin-top: 15px;
-transition: background 0.3s;
+margin: 10px 10px 0 0;
+transition: background 0.3s ease;
+text-align: center;
 }
 .btn:hover { background: #003d82; }
+.btn-green { background: #28a745; }
+.btn-green:hover { background: #218838; }
 
-/* التجاوب مع شاشات الجوال */
+/* Responsive Design (Mobile & Tablets) */
 @media (max-width: 768px) {
 .nav-links {
 display: none;
@@ -149,40 +167,46 @@ background: white;
 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 padding: 20px 0;
 text-align: center;
+gap: 15px;
 }
 .nav-links.active { display: flex; }
+.nav-links li a { font-size: 1.1rem; }
 .menu-toggle { display: block; }
-#home h1 { font-size: 2.2rem; }
+
+#home h1 { font-size: 2.5rem; }
 .cards-container { grid-template-columns: 1fr 1fr; }
+section { padding: 80px 5% 40px; }
 }
 @media (max-width: 480px) {
 .cards-container { grid-template-columns: 1fr; }
+#home h1 { font-size: 2.2rem; }
 }
 </style>
 </head>
 <body>
 
-<!-- القائمة العلوية -->
+<!-- Sticky Navbar -->
 <header class="navbar">
-<div class="logo">NA.</div>
+<div class="logo">NEDHAL.</div>
 <div class="menu-toggle" id="mobile-menu">☰</div>
 <ul class="nav-links" id="nav-links">
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
+<li><a href="#about">About Me</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#achievements">Achievements</a></li>
 <li><a href="#skills">Skills & Tools</a></li>
+<li><a href="#education">Education</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </header>
 
-<!-- الصفحة الرئيسية - البروفايل -->
+<!-- Profile & Hero Section (Landing Page) -->
 <section id="home">
 <h1>Nedhal Mosa Almarhoun</h1>
 <h2>Senior Administrative & Operations Specialist</h2>
 <p>A proactive professional with over 14 years of experience optimizing corporate operations, managing complex data structures, and delivering scalable administrative solutions.</p>
 
-<!-- البطاقات -->
+<!-- Quick Navigation Cards -->
 <div class="cards-container">
 <a href="#experience" class="card">
 <h3>14+</h3>
@@ -193,8 +217,8 @@ text-align: center;
 <p>Telecom Lines Managed</p>
 </a>
 <a href="#achievements" class="card">
-<h3>66%</h3>
-<p>Cost Reduction (150K to 50K)</p>
+<h3>SAR 150K → 50K</h3>
+<p>Cost Optimization</p>
 </a>
 <a href="#skills" class="card">
 <h3>Data & Analytics</h3>
@@ -203,52 +227,51 @@ text-align: center;
 </div>
 </section>
 
-<!-- قسم About Me -->
+<!-- About Me Section -->
 <section id="about">
 <h2 class="section-title">About Me</h2>
 <div class="content-box">
 <p>I specialize in bridging the gap between administrative operations and data-driven decision-making. Over the past decade, I have consistently transformed manual, time-consuming processes into streamlined, automated workflows.</p>
-<br>
-<p>My approach is simple: <strong>Analyze the challenge, optimize the workflow, and deliver measurable results.</strong> Whether it's managing a massive corporate telecom fleet or building interactive Power BI dashboards, I bring efficiency and clarity to complex organizational structures.</p>
+<p>My approach is simple: <strong>Analyze the challenge, optimize the workflow, and deliver measurable results.</strong> Whether it's managing a massive corporate telecom fleet, auditing budgets, or building interactive Power BI dashboards, I bring efficiency and clarity to complex organizational structures.</p>
+<p><strong>Target Roles:</strong> Administrative Management, Operations Specialist, Data Management, Project Coordination.</p>
 </div>
 </section>
 
-<!-- قسم الخبرة -->
+<!-- Experience Section -->
 <section id="experience">
 <h2 class="section-title">Professional Experience</h2>
 <div class="content-box">
-<h3>JGC Gulf International Co. Ltd.</h3>
-<p><strong>Senior Administrative Specialist</strong> | Al-Khobar, Saudi Arabia | (14 Years Tenure)</p>
-<br>
+<h3>Senior Administrative Specialist</h3>
+<p><strong>JGC Gulf International Co. Ltd.</strong> | Al-Khobar, Saudi Arabia | <em>14 Years Tenure</em></p>
 <ul class="custom-list">
-<li>Managed end-to-end office operations, ensuring seamless daily workflows across departments.</li>
-<li>Acted as the primary point of contact for corporate telecom management, handling contracts, distribution, and cost auditing.</li>
-<li>Collaborated closely with HR, IT, and Finance to ensure compliance, resource allocation, and budget tracking.</li>
-<li>Organized executive meetings, prepared complex reports, and maintained critical corporate records.</li>
+<li>Managed end-to-end office operations, ensuring seamless daily workflows across multiple departments.</li>
+<li>Acted as the primary point of contact for corporate telecom management, handling contracts, distribution, and comprehensive cost auditing.</li>
+<li>Collaborated closely with HR, IT, and Finance to ensure compliance, proper resource allocation, and accurate budget tracking.</li>
+<li>Organized executive meetings, prepared complex analytical reports, and maintained critical corporate records.</li>
 </ul>
 </div>
 </section>
 
-<!-- قسم الإنجازات و Case Studies -->
+<!-- Achievements & Case Studies Section -->
 <section id="achievements">
-<h2 class="section-title">Key Achievements & Case Studies</h2>
+<h2 class="section-title">Achievements & Case Studies</h2>
 
 <div class="content-box">
-<h3>📈 Telecom Cost Optimization</h3>
-<p><strong>Challenge:</strong> Monthly corporate telecom expenses were excessively high (averaging SAR 150,000).</p>
-<p><strong>Action:</strong> Conducted a deep-dive data analysis into usage patterns, restructured the allocation policy, and negotiated terms.</p>
-<p><strong>Result:</strong> Successfully reduced monthly costs by 66%, bringing expenses down to ~SAR 50,000 without compromising operational efficiency.</p>
+<h3>📉 Telecom Cost Optimization</h3>
+<p><strong>The Challenge:</strong> Monthly corporate telecom expenses were excessively high (averaging SAR 150,000).</p>
+<p><strong>The Action:</strong> Conducted a deep-dive data analysis into usage patterns, restructured the allocation policy, and negotiated terms with service providers.</p>
+<p><strong>The Result:</strong> Successfully reduced monthly costs by 66%, bringing expenses down to ~SAR 50,000 without compromising operational efficiency.</p>
 </div>
 
 <div class="content-box">
-<h3>📱 Managing 1,800+ Telecom Lines</h3>
-<p><strong>Challenge:</strong> Tracking and allocating over 1,800 corporate SIM cards and devices manually was error-prone.</p>
-<p><strong>Action:</strong> Designed and implemented a robust Power BI dashboard connected to a structured database to monitor usage, track hardware, and flag anomalies.</p>
-<p><strong>Result:</strong> Achieved 100% visibility on telecom assets, drastically reducing lost devices and unapproved billing overages.</p>
+<h3>📊 Managing 1,800+ Telecom Lines Ecosystem</h3>
+<p><strong>The Challenge:</strong> Tracking and allocating over 1,800 corporate SIM cards and devices manually using outdated spreadsheets was highly error-prone.</p>
+<p><strong>The Action:</strong> Designed and implemented a robust Power BI dashboard connected to a structured database to monitor usage, track hardware, and instantly flag billing anomalies.</p>
+<p><strong>The Result:</strong> Achieved 100% visibility on telecom assets, drastically reducing lost devices and eliminating unapproved billing overages.</p>
 </div>
 </section>
 
-<!-- قسم المهارات والأدوات -->
+<!-- Skills & Tools Section -->
 <section id="skills">
 <h2 class="section-title">Skills & Tools</h2>
 <div class="content-box">
@@ -262,33 +285,44 @@ text-align: center;
 </ul>
 </div>
 <div class="content-box">
-<h3>Technical Tools</h3>
+<h3>Technical Arsenal</h3>
 <ul class="custom-list">
-<li><strong>Microsoft Power BI:</strong> Creating interactive corporate dashboards and DAX modeling.</li>
-<li><strong>Advanced Excel:</strong> Power Query, Pivot Tables, VBA, and complex formulas.</li>
-<li><strong>Microsoft Office Suite:</strong> Word, PowerPoint, Outlook (Expert level).</li>
+<li><strong>Microsoft Power BI:</strong> Creating interactive corporate dashboards, DAX modeling, and data storytelling.</li>
+<li><strong>Advanced Excel:</strong> Power Query, Pivot Tables, VBA Macros, and complex financial/operational formulas.</li>
+<li><strong>Microsoft Office Suite:</strong> Expert level in Word, PowerPoint, and Outlook for executive communications.</li>
+<li><strong>Digital Content:</strong> Proficient in using video editing tools (CapCut) for professional presentations and digital media.</li>
 </ul>
 </div>
 </section>
 
-<!-- قسم التواصل -->
-<section id="contact">
-<h2 class="section-title">Contact & Resume</h2>
-<div class="content-box" style="text-align: center;">
-<p>I am currently exploring new opportunities in Administration, Operations, and Data Management.</p>
-<br>
-<p><strong>Location:</strong> Qatif, Saudi Arabia</p>
-<p><strong>Email:</strong> [Your Email Here]</p>
-<p><strong>LinkedIn:</strong> <a href="#" style="color:#0056b3;">Your LinkedIn Profile</a></p>
-<br>
-<a href="#" class="btn">Download Full CV (PDF)</a>
-<a href="mailto:youremail@example.com" class="btn" style="background-color: #28a745;">Email Me</a>
+<!-- Education Section -->
+<section id="education">
+<h2 class="section-title">Education</h2>
+<div class="content-box">
+<h3>Diploma in Executive Secretarial Studies</h3>
+<p><strong>Institute of Public Administration</strong></p>
+<p>Intensive program focused on advanced office management, corporate communication, and administrative efficiency.</p>
 </div>
 </section>
 
-<!-- برمجة القائمة والتنقل -->
+<!-- Contact Section -->
+<section id="contact">
+<h2 class="section-title">Contact & Resume</h2>
+<div class="content-box" style="text-align: center;">
+<p style="font-size: 1.1rem; margin-bottom: 20px;">I am currently exploring new opportunities where I can leverage my experience in administration, operations, and data management to drive organizational success.</p>
+
+<p><strong>Location:</strong> Qatif, Saudi Arabia</p>
+<p><strong>Email:</strong> youremail@example.com</p>
+<p><strong>WhatsApp / Phone:</strong> +966 5X XXX XXXX</p>
+<br>
+
+<a href="./Nedhal-Almarhoon-CV.pdf" class="btn" target="_blank">Download Full CV (PDF)</a>
+<a href="mailto:youremail@example.com" class="btn btn-green">Email Me</a>
+<a href="https://linkedin.com/in/YOUR_PROFILE" class="btn" style="background-color: #0077b5;" target="_blank">LinkedIn Profile</a>
+</div>
+</section>
+
 <script>
-// تفعيل قائمة الجوال (Hamburger Menu)
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.getElementById('nav-links');
 const links = document.querySelectorAll('.nav-links li a');
@@ -297,7 +331,6 @@ mobileMenu.addEventListener('click', () => {
 navLinks.classList.toggle('active');
 });
 
-// إغلاق القائمة عند الضغط على أي رابط (في الجوال)
 links.forEach(link => {
 link.addEventListener('click', () => {
 navLinks.classList.remove('active');
