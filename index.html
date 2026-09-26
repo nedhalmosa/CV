@@ -1,1101 +1,308 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nedhal Mosa Al Marhoon | Administrative & Operations Professional</title>
-  <meta name="description" content="Nedhal Mosa Al Marhoon — Administrative & Operations Professional with 14+ years of experience in administrative operations, project support, process improvement, telecom administration and workflow optimization.">
-  
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      --primary-navy: #0F172A;
-      --secondary-navy: #1E293B;
-      --accent-teal: #0D9488;
-      --accent-teal-hover: #0F766E;
-      --soft-blue: #E0F2FE;
-      --soft-blue-text: #0369A1;
-      --bg-light: #F8FAFC;
-      --bg-card: #FFFFFF;
-      --text-main: #334155;
-      --text-muted: #64748B;
-      --border-color: #E2E8F0;
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --max-width: 1100px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding-bottom: 70px;
-    }
-
-    @media (min-width: 768px) {
-      body {
-        padding-bottom: 0;
-      }
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    /* Sticky Navigation */
-    .navbar {
-      background-color: var(--primary-navy);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 65px;
-    }
-
-    .nav-brand {
-      color: #FFFFFF;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      letter-spacing: -0.01em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.1rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: #94A3B8;
-      text-decoration: none;
-      font-size: 0.825rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover, .nav-links a.active {
-      color: #FFFFFF;
-    }
-
-    .nav-links a.cv-highlight {
-      background-color: var(--accent-teal);
-      color: #FFFFFF;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-    }
-
-    .nav-links a.cv-highlight:hover {
-      background-color: var(--accent-teal-hover);
-    }
-
-    /* Mobile Menu Toggle Button */
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #FFFFFF;
-      padding: 0.4rem 0.75rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
-    /* Mobile Dropdown Menu */
-    .mobile-dropdown {
-      display: none;
-      background-color: var(--secondary-navy);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1rem 1.25rem;
-    }
-
-    .mobile-dropdown.open {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .mobile-dropdown a {
-      color: #CBD5E1;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      padding: 0.3rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .mobile-dropdown a:hover {
-      color: #FFFFFF;
-    }
-
-    @media (max-width: 992px) {
-      .nav-links {
-        display: none;
-      }
-      .mobile-menu-btn {
-        display: block;
-      }
-    }
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
-      color: #FFFFFF;
-      padding: 2.5rem 0 2rem 0;
-      border-bottom: 4px solid var(--accent-teal);
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: rgba(13, 148, 136, 0.2);
-      color: #5EEAD4;
-      padding: 0.3rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      border: 1px solid rgba(13, 148, 136, 0.4);
-    }
-
-    .hero-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 0.25rem;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-arabic-name {
-      font-family: 'Noto Sans Arabic', sans-serif;
-      font-size: 1.15rem;
-      color: #94A3B8;
-      font-weight: 400;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .hero-subtitle {
-      font-size: 1.1rem;
-      color: #CBD5E1;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-experience {
-      font-size: 0.9rem;
-      color: #94A3B8;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-      font-size: 0.85rem;
-      color: #CBD5E1;
-      margin-bottom: 1.5rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .hero-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.55rem 1.1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      text-decoration: none;
-      cursor: pointer;
-      border: 1px solid transparent;
-      transition: all 0.2s ease;
-    }
-
-    .btn-primary {
-      background-color: var(--accent-teal);
-      color: #FFFFFF;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--accent-teal-hover);
-    }
-
-    .btn-secondary {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #FFFFFF;
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .btn-secondary:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Interactive Hero KPI Cards Grid (The 4 clickable cards) */
-    .hero-kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .hero-kpi-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 1.15rem;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .hero-kpi-card:hover {
-      background: rgba(13, 148, 136, 0.15);
-      border-color: var(--accent-teal);
-      transform: translateY(-2px);
-    }
-
-    .hero-kpi-value {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #5EEAD4;
-      margin-bottom: 0.2rem;
-    }
-
-    .hero-kpi-label {
-      font-size: 0.8rem;
-      color: #CBD5E1;
-      font-weight: 500;
-    }
-
-    .hero-kpi-action {
-      font-size: 0.725rem;
-      color: #94A3B8;
-      margin-top: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    /* Section Styles */
-    .section {
-      padding: 2.75rem 0;
-      border-bottom: 1px solid var(--border-color);
-      scroll-margin-top: 75px;
-    }
-
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--primary-navy);
-      margin-bottom: 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .section-title::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background-color: var(--border-color);
-    }
-
-    .about-card {
-      background: var(--bg-card);
-      padding: 1.75rem;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .about-text {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      margin-bottom: 1rem;
-    }
-
-    .about-text:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Experience */
-    .exp-card {
-      background: var(--bg-card);
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
-    }
-
-    .exp-header {
-      background-color: #F1F5F9;
-      padding: 1.25rem 1.5rem;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .exp-company {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary-navy);
-    }
-
-    .exp-role {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--accent-teal);
-      margin-bottom: 0.35rem;
-    }
-
-    .exp-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .exp-body {
-      padding: 1.5rem;
-    }
-
-    .exp-subgroup {
-      margin-bottom: 1.5rem;
-    }
-
-    .exp-subgroup:last-child {
-      margin-bottom: 0;
-    }
-
-    .exp-subgroup-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--secondary-navy);
-      margin-bottom: 0.6rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .exp-list {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .exp-list li {
-      position: relative;
-      padding-left: 1.25rem;
-      margin-bottom: 0.45rem;
-      font-size: 0.9rem;
-    }
-
-    .exp-list li::before {
-      content: "•";
-      color: var(--accent-teal);
-      font-weight: bold;
-      font-size: 1.1rem;
-      position: absolute;
-      left: 0;
-      top: -0.1rem;
-    }
-
-    /* Achievements Grid */
-    .ach-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .ach-card {
-      background: var(--bg-card);
-      padding: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      border-top: 3px solid var(--accent-teal);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .ach-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--primary-navy);
-      margin-bottom: 0.5rem;
-    }
-
-    .ach-desc {
-      font-size: 0.875rem;
-      color: var(--text-main);
-    }
-
-    /* Case Studies */
-    .cs-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-
-    .cs-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .cs-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--primary-navy);
-      margin-bottom: 0.85rem;
-    }
-
-    .cs-flow {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-    }
-
-    .cs-block {
-      background-color: var(--bg-light);
-      padding: 0.85rem;
-      border-radius: 6px;
-      border-left: 3px solid var(--border-color);
-    }
-
-    .cs-block.result {
-      border-left-color: var(--accent-teal);
-      background-color: #F0FDF4;
-    }
-
-    .cs-block-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      margin-bottom: 0.25rem;
-    }
-
-    .cs-block.result .cs-block-label {
-      color: #166534;
-    }
-
-    .cs-block-text {
-      font-size: 0.875rem;
-      color: var(--text-main);
-    }
-
-    .chip-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .chip {
-      background-color: #E2E8F0;
-      color: var(--secondary-navy);
-      padding: 0.35rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .target-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0.75rem;
-      list-style: none;
-    }
-
-    .target-item {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      padding: 0.85rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      color: var(--primary-navy);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .target-item i {
-      color: var(--accent-teal);
-    }
-
-    /* Footer */
-    .footer {
-      background-color: var(--primary-navy);
-      color: #94A3B8;
-      padding: 2.5rem 0;
-      font-size: 0.875rem;
-    }
-
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.25rem;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .footer-links a {
-      color: #CBD5E1;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    /* Mobile Sticky Bar */
-    .mobile-bar {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #FFFFFF;
-      border-top: 1px solid var(--border-color);
-      padding: 0.65rem 1rem;
-      box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1);
-      z-index: 999;
-    }
-
-    .mobile-bar-actions {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: space-between;
-    }
-
-    .mobile-bar-actions .btn {
-      flex: 1;
-      justify-content: center;
-      padding: 0.55rem 0.5rem;
-      font-size: 0.825rem;
-    }
-
-    @media (max-width: 767px) {
-      .mobile-bar {
-        display: block;
-      }
-      .hero-title {
-        font-size: 1.75rem;
-      }
-      .section {
-        padding: 2rem 0;
-      }
-    }
-
-    @media print {
-      body {
-        background: #FFFFFF;
-        color: #000000;
-        padding-bottom: 0;
-      }
-      .navbar, .mobile-dropdown, .mobile-bar, .hero-actions, .btn {
-        display: none !important;
-      }
-      .hero {
-        background: none;
-        color: #000000;
-        padding: 1rem 0;
-        border-bottom: 2px solid #000000;
-      }
-      .hero-subtitle, .hero-experience, .hero-arabic-name, .hero-meta {
-        color: #333333;
-      }
-      .hero-badge, .hero-tag, .hero-kpi-card {
-        border: 1px solid #666666;
-        color: #000000;
-        background: none;
-      }
-      .section {
-        padding: 1.25rem 0;
-        page-break-inside: avoid;
-      }
-      .about-card, .exp-card, .ach-card, .cs-card {
-        border: 1px solid #CCCCCC;
-        box-shadow: none;
-      }
-      .exp-header {
-        background: #F5F5F5;
-      }
-      a {
-        text-decoration: none;
-        color: #000000;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nedhal Mosa Almarhoun - Portfolio</title>
+<!-- خطوط جوجل -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* إعدادات عامة */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+body {
+background-color: #f8f9fa;
+color: #333;
+line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+/* القائمة العلوية الثابتة */
+header.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+background: #ffffff;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 5%;
+}
+.logo {
+font-size: 1.5rem;
+font-weight: 700;
+color: #0056b3;
+}
+.nav-links {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+.nav-links li a {
+font-size: 0.9rem;
+font-weight: 600;
+color: #555;
+transition: color 0.3s;
+}
+.nav-links li a:hover {
+color: #0056b3;
+}
+/* زر القائمة للجوال */
+.menu-toggle {
+display: none;
+font-size: 1.8rem;
+cursor: pointer;
+color: #333;
+}
+
+/* تنسيق الأقسام */
+section {
+padding: 100px 5% 50px; /* الـ 100px عشان القائمة العلوية ما تغطي المحتوى */
+min-height: 100vh;
+}
+.section-title {
+font-size: 2rem;
+color: #0056b3;
+margin-bottom: 30px;
+text-align: center;
+border-bottom: 2px solid #e0e0e0;
+padding-bottom: 10px;
+}
+
+/* الصفحة الرئيسية - البروفايل */
+#home {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: linear-gradient(135deg, #0056b3, #003d82);
+color: white;
+}
+#home h1 { font-size: 3rem; margin-bottom: 10px; }
+#home h2 { font-size: 1.5rem; font-weight: 300; margin-bottom: 20px; opacity: 0.9; }
+#home p { max-width: 700px; margin-bottom: 40px; font-size: 1.1rem; }
+
+/* البطاقات الأربع */
+.cards-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+width: 100%;
+max-width: 1000px;
+}
+.card {
+background: white;
+color: #333;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+cursor: pointer;
+}
+.card:hover { transform: translateY(-5px); }
+.card h3 { color: #0056b3; font-size: 1.8rem; margin-bottom: 5px; }
+.card p { font-size: 0.9rem; font-weight: 600; margin:0;}
+
+/* تنسيق المحتوى داخل الأقسام */
+.content-box {
+background: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+margin-bottom: 20px;
+}
+.content-box h3 { margin-bottom: 15px; color: #333; }
+ul.custom-list { list-style-position: inside; margin-bottom: 15px; padding-left: 10px;}
+ul.custom-list li { margin-bottom: 8px; }
+
+/* أزرار التواصل وتحميل السيرة */
+.btn {
+display: inline-block;
+padding: 10px 25px;
+background: #0056b3;
+color: white;
+border-radius: 5px;
+font-weight: 600;
+margin-top: 15px;
+transition: background 0.3s;
+}
+.btn:hover { background: #003d82; }
+
+/* التجاوب مع شاشات الجوال */
+@media (max-width: 768px) {
+.nav-links {
+display: none;
+flex-direction: column;
+position: absolute;
+top: 60px;
+left: 0;
+width: 100%;
+background: white;
+box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+padding: 20px 0;
+text-align: center;
+}
+.nav-links.active { display: flex; }
+.menu-toggle { display: block; }
+#home h1 { font-size: 2.2rem; }
+.cards-container { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+.cards-container { grid-template-columns: 1fr; }
+}
+</style>
 </head>
-<body id="home">
+<body>
 
-  <!-- Sticky Navigation Bar -->
-  <nav class="navbar" aria-label="Main Navigation">
-    <div class="container nav-container">
-      <a href="#home" class="nav-brand">NEDHAL MOSA AL MARHOON</a>
-      
-      <!-- Desktop Menu -->
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#cases">Case Studies</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#roles">Target Roles</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="assets/Nedhal-Mosa-Al-Marhoon-CV.pdf" download class="cv-highlight"><i class="fa-solid fa-download"></i> Download CV</a></li>
-      </ul>
+<!-- القائمة العلوية -->
+<header class="navbar">
+<div class="logo">NA.</div>
+<div class="menu-toggle" id="mobile-menu">☰</div>
+<ul class="nav-links" id="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#skills">Skills & Tools</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</header>
 
-      <!-- Mobile Menu Button -->
-      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
-        <i class="fa-solid fa-bars"></i> Menu
-      </button>
-    </div>
-  </nav>
+<!-- الصفحة الرئيسية - البروفايل -->
+<section id="home">
+<h1>Nedhal Mosa Almarhoun</h1>
+<h2>Senior Administrative & Operations Specialist</h2>
+<p>A proactive professional with over 14 years of experience optimizing corporate operations, managing complex data structures, and delivering scalable administrative solutions.</p>
 
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobileDropdown" class="mobile-dropdown">
-    <a href="#home" onclick="toggleMobileMenu()">Home</a>
-    <a href="#about" onclick="toggleMobileMenu()">About Me</a>
-    <a href="#experience" onclick="toggleMobileMenu()">Experience</a>
-    <a href="#achievements" onclick="toggleMobileMenu()">Achievements</a>
-    <a href="#cases" onclick="toggleMobileMenu()">Case Studies</a>
-    <a href="#skills" onclick="toggleMobileMenu()">Skills</a>
-    <a href="#tools" onclick="toggleMobileMenu()">Tools</a>
-    <a href="#education" onclick="toggleMobileMenu()">Education</a>
-    <a href="#roles" onclick="toggleMobileMenu()">Target Roles</a>
-    <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
-    <a href="assets/Nedhal-Mosa-Al-Marhoon-CV.pdf" download style="color: #5EEAD4;"><i class="fa-solid fa-download"></i> Download CV (PDF)</a>
-  </div>
+<!-- البطاقات -->
+<div class="cards-container">
+<a href="#experience" class="card">
+<h3>14+</h3>
+<p>Years Experience</p>
+</a>
+<a href="#achievements" class="card">
+<h3>1,800+</h3>
+<p>Telecom Lines Managed</p>
+</a>
+<a href="#achievements" class="card">
+<h3>66%</h3>
+<p>Cost Reduction (150K to 50K)</p>
+</a>
+<a href="#skills" class="card">
+<h3>Data & Analytics</h3>
+<p>Process Automation & Power BI</p>
+</a>
+</div>
+</section>
 
-  <!-- Hero Header -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-badge">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>Open to Administrative & Operations Opportunities</span>
-      </div>
-      
-      <h1 class="hero-title">NEDHAL MOSA AL MARHOON</h1>
-      <span class="hero-arabic-name" lang="ar" dir="rtl">نضال موسى آل مرهون</span>
-      
-      <div class="hero-subtitle">Administrative & Operations Professional</div>
-      
-      <div class="hero-experience">
-        <strong>14+ Years of Experience</strong> in Administrative Operations, Project Support & Process Improvement
-      </div>
+<!-- قسم About Me -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<div class="content-box">
+<p>I specialize in bridging the gap between administrative operations and data-driven decision-making. Over the past decade, I have consistently transformed manual, time-consuming processes into streamlined, automated workflows.</p>
+<br>
+<p>My approach is simple: <strong>Analyze the challenge, optimize the workflow, and deliver measurable results.</strong> Whether it's managing a massive corporate telecom fleet or building interactive Power BI dashboards, I bring efficiency and clarity to complex organizational structures.</p>
+</div>
+</section>
 
-      <div class="hero-meta">
-        <div class="hero-meta-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Qatif / Eastern Province, Saudi Arabia</span>
-        </div>
-        <div class="hero-meta-item">
-          <i class="fa-solid fa-envelope"></i>
-          <span>nidal.almarhoon@gmail.com</span>
-        </div>
-        <div class="hero-meta-item">
-          <i class="fa-solid fa-phone"></i>
-          <span>+966 50 388 9202</span>
-        </div>
-      </div>
+<!-- قسم الخبرة -->
+<section id="experience">
+<h2 class="section-title">Professional Experience</h2>
+<div class="content-box">
+<h3>JGC Gulf International Co. Ltd.</h3>
+<p><strong>Senior Administrative Specialist</strong> | Al-Khobar, Saudi Arabia | (14 Years Tenure)</p>
+<br>
+<ul class="custom-list">
+<li>Managed end-to-end office operations, ensuring seamless daily workflows across departments.</li>
+<li>Acted as the primary point of contact for corporate telecom management, handling contracts, distribution, and cost auditing.</li>
+<li>Collaborated closely with HR, IT, and Finance to ensure compliance, resource allocation, and budget tracking.</li>
+<li>Organized executive meetings, prepared complex reports, and maintained critical corporate records.</li>
+</ul>
+</div>
+</section>
 
-      <div class="hero-actions">
-        <a href="assets/Nedhal-Mosa-Al-Marhoon-CV.pdf" download class="btn btn-primary" aria-label="Download Official PDF CV">
-          <i class="fa-solid fa-download"></i> Download CV (PDF)
-        </a>
-        <a href="https://wa.me/966503889202" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Contact via WhatsApp">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="https://www.linkedin.com/in/nedhal-al-marhoon-3637b8249" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="LinkedIn Profile">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-        <button onclick="window.print()" class="btn btn-secondary" aria-label="Print Page">
-          <i class="fa-solid fa-print"></i> Print Profile
-        </button>
-      </div>
+<!-- قسم الإنجازات و Case Studies -->
+<section id="achievements">
+<h2 class="section-title">Key Achievements & Case Studies</h2>
 
-      <!-- 4 Interactive Hero KPI Cards -->
-      <div class="hero-kpi-grid">
-        <a href="#experience" class="hero-kpi-card">
-          <div>
-            <div class="hero-kpi-value">14+ Years</div>
-            <div class="hero-kpi-label">Years Experience</div>
-          </div>
-          <div class="hero-kpi-action">View Experience <i class="fa-solid fa-arrow-down"></i></div>
-        </a>
+<div class="content-box">
+<h3>📈 Telecom Cost Optimization</h3>
+<p><strong>Challenge:</strong> Monthly corporate telecom expenses were excessively high (averaging SAR 150,000).</p>
+<p><strong>Action:</strong> Conducted a deep-dive data analysis into usage patterns, restructured the allocation policy, and negotiated terms.</p>
+<p><strong>Result:</strong> Successfully reduced monthly costs by 66%, bringing expenses down to ~SAR 50,000 without compromising operational efficiency.</p>
+</div>
 
-        <a href="#achievements" class="hero-kpi-card">
-          <div>
-            <div class="hero-kpi-value">1,800+</div>
-            <div class="hero-kpi-label">Telecom Lines Managed</div>
-          </div>
-          <div class="hero-kpi-action">View Telelcom Admin <i class="fa-solid fa-arrow-down"></i></div>
-        </a>
+<div class="content-box">
+<h3>📱 Managing 1,800+ Telecom Lines</h3>
+<p><strong>Challenge:</strong> Tracking and allocating over 1,800 corporate SIM cards and devices manually was error-prone.</p>
+<p><strong>Action:</strong> Designed and implemented a robust Power BI dashboard connected to a structured database to monitor usage, track hardware, and flag anomalies.</p>
+<p><strong>Result:</strong> Achieved 100% visibility on telecom assets, drastically reducing lost devices and unapproved billing overages.</p>
+</div>
+</section>
 
-        <a href="#cases" class="hero-kpi-card">
-          <div>
-            <div class="hero-kpi-value">SAR 150K → 50K</div>
-            <div class="hero-kpi-label">Telecom Cost Optimization</div>
-          </div>
-          <div class="hero-kpi-action">View Case Studies <i class="fa-solid fa-arrow-down"></i></div>
-        </a>
+<!-- قسم المهارات والأدوات -->
+<section id="skills">
+<h2 class="section-title">Skills & Tools</h2>
+<div class="content-box">
+<h3>Core Competencies</h3>
+<ul class="custom-list">
+<li>Operations & Administrative Management</li>
+<li>Data Analysis & Visualization</li>
+<li>Process Automation & Workflow Optimization</li>
+<li>Cost Control & Budget Auditing</li>
+<li>Project Coordination</li>
+</ul>
+</div>
+<div class="content-box">
+<h3>Technical Tools</h3>
+<ul class="custom-list">
+<li><strong>Microsoft Power BI:</strong> Creating interactive corporate dashboards and DAX modeling.</li>
+<li><strong>Advanced Excel:</strong> Power Query, Pivot Tables, VBA, and complex formulas.</li>
+<li><strong>Microsoft Office Suite:</strong> Word, PowerPoint, Outlook (Expert level).</li>
+</ul>
+</div>
+</section>
 
-        <a href="#tools" class="hero-kpi-card">
-          <div>
-            <div class="hero-kpi-value">12+</div>
-            <div class="hero-kpi-label">Workflow & Excel Solutions</div>
-          </div>
-          <div class="hero-kpi-action">View Digital Tools <i class="fa-solid fa-arrow-down"></i></div>
-        </a>
-      </div>
+<!-- قسم التواصل -->
+<section id="contact">
+<h2 class="section-title">Contact & Resume</h2>
+<div class="content-box" style="text-align: center;">
+<p>I am currently exploring new opportunities in Administration, Operations, and Data Management.</p>
+<br>
+<p><strong>Location:</strong> Qatif, Saudi Arabia</p>
+<p><strong>Email:</strong> [Your Email Here]</p>
+<p><strong>LinkedIn:</strong> <a href="#" style="color:#0056b3;">Your LinkedIn Profile</a></p>
+<br>
+<a href="#" class="btn">Download Full CV (PDF)</a>
+<a href="mailto:youremail@example.com" class="btn" style="background-color: #28a745;">Email Me</a>
+</div>
+</section>
 
-    </div>
-  </header>
+<!-- برمجة القائمة والتنقل -->
+<script>
+// تفعيل قائمة الجوال (Hamburger Menu)
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+const links = document.querySelectorAll('.nav-links li a');
 
-  <!-- About Me -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title"><i class="fa-solid fa-user-tie"></i> About Me</h2>
-      <div class="about-card">
-        <p class="about-text">
-          Administrative & Operations Professional with more than 14 years of hands-on experience at JGC Gulf International, supporting administrative operations, project activities, employees, vendors, and internal departments within engineering and corporate environments.
-        </p>
-        <p class="about-text">
-          My experience combines traditional administrative and operational responsibilities with practical process improvement and data-driven workflow optimization. I have handled telecom administration, vendor invoices, employee services, utilities, accommodation, procurement coordination, payment requests, operational reporting, document management, and cross-functional coordination with Finance, management, site teams, and external service providers.
-        </p>
-        <p class="about-text">
-          A key part of my work has been identifying repetitive manual processes and improving them through practical digital solutions. I have used Advanced Excel, Power Query, PivotTables, VBA/Macros, and Power BI to organize operational data, automate recurring tasks, improve reporting accuracy, and provide clearer visibility for decision-making.
-        </p>
-        <p class="about-text">
-          My approach is not focused on technology for its own sake. I use technology as a practical tool to make administrative work more accurate, faster, easier to control, and easier for teams to manage.
-        </p>
-      </div>
-    </div>
-  </section>
+mobileMenu.addEventListener('click', () => {
+navLinks.classList.toggle('active');
+});
 
-  <!-- Experience -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience</h2>
-      
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-company">JGC Gulf International</div>
-          <div class="exp-role">Senior Administrative & Operations Specialist / Project Support</div>
-          <div class="exp-meta">
-            <span><i class="fa-regular fa-calendar"></i> April 2010 – January 2025</span>
-            <span><i class="fa-solid fa-location-dot"></i> Al Khobar, Saudi Arabia</span>
-          </div>
-        </div>
-        
-        <div class="exp-body">
-          <div class="exp-subgroup">
-            <h3 class="exp-subgroup-title"><i class="fa-solid fa-sliders"></i> Administrative Operations</h3>
-            <ul class="exp-list">
-              <li>Supported daily administrative operations across corporate departments and project/site environments.</li>
-              <li>Coordinated employee administrative requests, services, accommodation, utilities, transportation, and facilities.</li>
-              <li>Facilitated requests between employees, management, Finance, and external service providers.</li>
-              <li>Prepared administrative reports, trackers, and operational records with structured documentation.</li>
-              <li>Maintained organized documentation and supporting records for audit readiness.</li>
-            </ul>
-          </div>
-
-          <div class="exp-subgroup">
-            <h3 class="exp-subgroup-title"><i class="fa-solid fa-phone-volume"></i> Telecom Administration</h3>
-            <ul class="exp-list">
-              <li>Managed corporate telecom administration covering STC and Mobily services.</li>
-              <li>Supported 800+ mobile lines and 1,000+ landlines across corporate and site divisions.</li>
-              <li>Reviewed monthly telecom invoices and identified billing discrepancies prior to approval.</li>
-              <li>Coordinated service changes, line allocations, and account updates.</li>
-              <li>Followed up with telecom account managers to resolve billing and service issues.</li>
-            </ul>
-          </div>
-
-          <div class="exp-subgroup">
-            <h3 class="exp-subgroup-title"><i class="fa-solid fa-file-invoice-dollar"></i> Financial & Invoice Coordination</h3>
-            <ul class="exp-list">
-              <li>Verified invoices and supporting documents prior to Finance processing.</li>
-              <li>Coordinated payment requests and approval follow-ups from initiation through completion.</li>
-              <li>Reconciled invoices and operational expenses against internal records.</li>
-              <li>Worked closely with Finance and vendors to resolve discrepancies.</li>
-            </ul>
-          </div>
-
-          <div class="exp-subgroup">
-            <h3 class="exp-subgroup-title"><i class="fa-solid fa-handshake"></i> Vendor & Contract Coordination</h3>
-            <ul class="exp-list">
-              <li>Coordinated with external vendors and service providers on operational deliverables.</li>
-              <li>Followed up on contracts, invoices, service issues, and administrative requirements.</li>
-              <li>Maintained structured communication channels between vendors, internal departments, and management.</li>
-            </ul>
-          </div>
-
-          <div class="exp-subgroup">
-            <h3 class="exp-subgroup-title"><i class="fa-solid fa-helmet-safety"></i> Project & Site Administration</h3>
-            <ul class="exp-list">
-              <li>Supported administrative requirements within engineering and project environments.</li>
-              <li>Coordinated administrative requests between project/site personnel and corporate departments.</li>
-              <li>Supported employee mobilization and related administrative requirements.</li>
-              <li>Prepared project-related reports, trackers, and documentation required for operational follow-up.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Achievements -->
-  <section id="achievements" class="section">
-    <div class="container">
-      <h2 class="section-title"><i class="fa-solid fa-award"></i> Achievements</h2>
-      
-      <div class="ach-grid">
-        <div class="ach-card">
-          <div class="ach-title">Telecom Cost Optimization</div>
-          <div class="ach-desc">Progressively optimized corporate telecom expenditure from SAR 150K down to ~SAR 50K per month through audits, package restructuring, and line account cleanup.</div>
-        </div>
-
-        <div class="ach-card">
-          <div class="ach-title">Operations Budget Control</div>
-          <div class="ach-desc">Successfully managed monthly operational expenditures exceeding SAR 200,000 with complete verification accuracy and invoice reconciliation.</div>
-        </div>
-
-        <div class="ach-card">
-          <div class="ach-title">Workflow & Data Automation</div>
-          <div class="ach-desc">Created 12+ custom Excel, Power Query, and Power BI tools that eliminated manual reconciliation bottlenecks and accelerated monthly reporting cycles.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Studies -->
-  <section id="cases" class="section">
-    <div class="container">
-      <h2 class="section-title"><i class="fa-solid fa-folder-open"></i> Case Studies</h2>
-
-      <div class="cs-grid">
-        <div class="cs-card">
-          <h3 class="cs-title">Case Study 1: Telecom Cost Optimization</h3>
-          <div class="cs-flow">
-            <div class="cs-block">
-              <div class="cs-block-label">Challenge</div>
-              <div class="cs-block-text">Managing 1,800+ telecom lines resulted in billing complexity, unutilized services, and package mismatches.</div>
-            </div>
-            <div class="cs-block">
-              <div class="cs-block-label">Action</div>
-              <div class="cs-block-text">Audited STC and Mobily account lines, identified inactive services, and reviewed package requirements.</div>
-            </div>
-            <div class="cs-block result">
-              <div class="cs-block-label">Result</div>
-              <div class="cs-block-text">Reduced monthly telecom expenditure progressively from SAR 150K → SAR 80K → SAR 50K.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cs-card">
-          <h3 class="cs-title">Case Study 2: Telecom Invoice & Employee Allocation System</h3>
-          <div class="cs-flow">
-            <div class="cs-block">
-              <div class="cs-block-label">Challenge</div>
-              <div class="cs-block-text">Telecom provider invoices lacked an efficient employee-level cost breakdown, requiring heavy manual effort.</div>
-            </div>
-            <div class="cs-block">
-              <div class="cs-block-label">Action</div>
-              <div class="cs-block-text">Built a structured Power Query workflow that processes raw invoices and maps against master employee databases.</div>
-            </div>
-            <div class="cs-block result">
-              <div class="cs-block-label">Result</div>
-              <div class="cs-block-text">Significantly reduced manual review time and transformed a repetitive monthly process into an automated workflow.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cs-card">
-          <h3 class="cs-title">Case Study 3: Administrative Request & Payment Tracker</h3>
-          <div class="cs-flow">
-            <div class="cs-block">
-              <div class="cs-block-label">Challenge</div>
-              <div class="cs-block-text">Scattered payment requests and vendor invoices created follow-up delays and risk of missed tracking.</div>
-            </div>
-            <div class="cs-block">
-              <div class="cs-block-label">Action</div>
-              <div class="cs-block-text">Created a centralized administrative tracking workflow for document verification and status tracking.</div>
-            </div>
-            <div class="cs-block result">
-              <div class="cs-block-label">Result</div>
-              <div class="cs-block-text">Improved payment follow-up and enhanced transparency between Operations, Finance, and vendors.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title"><i class="fa-solid fa-list-check"></i> Skills</h2>
-      <div class="chip-container">
-        <span class="chip">Administrative Operations</span>
-        <span class="chip">Operations Coordination</span>
-        <span class="chip">Project Administration</span>
-        <span class="chip">Document Control</span>
-        <span class="chip">Vendor Coordination</span>
-        <span class="chip">Invoice Verification</span>
-        <span class="chip">Payment Coordination</span>
-        <span class="chip">Telecom Administration</span>
-        <span class="chip">Employee Services</span>
-        <span class="chip">Facilities Administration</span>
-        <span class="chip">Process Improvement</span>
-        <span class="chip">Workflow Optimization</span>
-        <span class="chip">Operational Reporting</span>
-        <span class="chip">Data Management</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tools -->
-  <section id="tools" class="section">
-    <div class="container">
-      <h2 class="section-title"><i class="fa-solid fa-wrench"></i> Tools</h2>
-      <div class="chip-container">
-        <span class="chip">Advanced Excel</span>
-        <span class="chip">Power Query</span>
-        <span class="chip">Power BI</span>
-        <span class="chip">PivotTables & Advanced Formulas</span>
-        <span class="chip">VBA / Macros</span>
-        <span class="chip">Basic DAX</span>
-        <span class="chip">Microsoft 365 (Word, Excel, PPT, Outlook, Teams)</span>
-        <span class="chip">ERP / SAP Exposure</span>
-        <span class="chip">Document Management Systems</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="section">
-    <div class="container">
-      <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-        <div class="about-card">
-          <h3 style="font-size: 1.05rem; color: var(--primary-navy); margin-bottom: 0.35rem;">Diploma in Executive Secretarial Studies</h3>
-          <div style="color: var(--accent-teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.2rem;">Institute of Public Administration (IPA) – Dammam</div>
-          <div style="color: var(--text-muted); font-size: 0.85rem;">Graduated: 2008</div>
-        </div>
-
-        <div class="about-card">
-          <h3 style="font-size: 1.05rem; color: var(--primary-navy); margin-bottom: 0.35rem;">Professional Training & Certifications</h3>
-          <ul class="exp-list" style="font-size: 0.875rem;">
-            <li><strong>Power Query Fundamentals</strong> — Corporate Finance Institute (CFI)</li>
-            <li><strong>Excel Skills for Business Specialization</strong> — Macquarie University</li>
-            <li>Continuous self-development in Power BI, Data Analytics, and Modern Workflows.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Target Roles -->
-  <section id="roles" class="section">
-    <div class="container">
-      <h2 class="section-title"><i class="fa-solid fa-bullseye"></i> Target Roles</h2>
-      <ul class="target-list">
-        <li class="target-item"><i class="fa-solid fa-check"></i> Administrative Specialist</li>
-        <li class="target-item"><i class="fa-solid fa-check"></i> Operations Coordinator</li>
-        <li class="target-item"><i class="fa-solid fa-check"></i> Project Administrator</li>
-        <li class="target-item"><i class="fa-solid fa-check"></i> Executive Assistant</li>
-        <li class="target-item"><i class="fa-solid fa-check"></i> Document Control / Support</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer & Contact -->
-  <footer id="contact" class="footer">
-    <div class="container footer-content">
-      <div>
-        <div style="font-weight: 700; color: #FFFFFF; font-size: 1rem; margin-bottom: 0.2rem;">NEDHAL MOSA AL MARHOON</div>
-        <div style="font-size: 0.85rem;">Administrative & Operations Professional • Qatif / Eastern Province, Saudi Arabia</div>
-        <div style="font-size: 0.85rem; margin-top: 0.3rem;"><i class="fa-solid fa-envelope"></i> nidal.almarhoon@gmail.com | <i class="fa-solid fa-phone"></i> +966 50 388 9202</div>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:nidal.almarhoon@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="tel:+966503889202" title="Phone"><i class="fa-solid fa-phone"></i></a>
-        <a href="https://wa.me/966503889202" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com/in/nedhal-al-marhoon-3637b8249" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Mobile Sticky Bar -->
-  <div class="mobile-bar" aria-label="Mobile Quick Actions">
-    <div class="mobile-bar-actions">
-      <a href="assets/Nedhal-Mosa-Al-Marhoon-CV.pdf" download class="btn btn-primary">
-        <i class="fa-solid fa-download"></i> Download CV
-      </a>
-      <a href="https://wa.me/966503889202" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="background-color: #25D366; color: white; border: none;">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-      </a>
-    </div>
-  </div>
-
-  <!-- JavaScript for Mobile Menu Dropdown -->
-  <script>
-    function toggleMobileMenu() {
-      const dropdown = document.getElementById('mobileDropdown');
-      dropdown.classList.toggle('open');
-    }
-  </script>
-
+// إغلاق القائمة عند الضغط على أي رابط (في الجوال)
+links.forEach(link => {
+link.addEventListener('click', () => {
+navLinks.classList.remove('active');
+});
+});
+</script>
 </body>
 </html>
