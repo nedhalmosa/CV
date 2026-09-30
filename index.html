@@ -55,10 +55,22 @@ body.lang-en .site-bg{transform:none}
 }
 .ibtn:hover{background:rgba(255,255,255,.1)}
 .ibtn svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round}
-.burger span{display:block;width:22px;height:2.4px;background:#EAF1EF;border-radius:2px;margin:4px 0;transition:.22s}
-.burger.x span:nth-child(1){transform:translateY(6.4px) rotate(45deg)}
-.burger.x span:nth-child(2){opacity:0}
-.burger.x span:nth-child(3){transform:translateY(-6.4px) rotate(-45deg)}
+.burger{width:auto;gap:9px;padding:0 12px;display:inline-flex;align-items:center}
+.burger .bl{display:block;width:22px;flex:0 0 22px}
+.burger .bl span{display:block;width:22px;height:2.4px;background:#EAF1EF;border-radius:2px;margin:4px 0;transition:.22s}
+.burger .btxt{font-size:13.5px;font-weight:600;white-space:nowrap}
+.lang-wrap{position:relative}
+.lang-pop{position:absolute;top:calc(100% + 8px);inset-inline-end:0;z-index:50;min-width:132px;
+  background:rgba(12,36,45,.98);border:1px solid rgba(223,212,188,.35);border-radius:6px;
+  box-shadow:0 10px 28px rgba(4,14,19,.5);padding:5px;display:none}
+.lang-pop.on{display:block}
+.lang-pop button{display:block;width:100%;text-align:inherit;background:none;border:0;color:#D6E3E3;
+  font:inherit;font-size:14.5px;padding:9px 12px;border-radius:4px;cursor:pointer}
+.lang-pop button:hover{background:rgba(255,255,255,.08);color:#fff}
+.lang-pop button[aria-current="true"]{color:var(--ochre);font-weight:700}
+.burger.x .bl span:nth-child(1){transform:translateY(6.4px) rotate(45deg)}
+.burger.x .bl span:nth-child(2){opacity:0}
+.burger.x .bl span:nth-child(3){transform:translateY(-6.4px) rotate(-45deg)}
 .ibtn:focus-visible,.hbtn:focus-visible,.mini:focus-visible,a:focus-visible,.acc-head:focus-visible,.menu button:focus-visible{outline:2px solid var(--ochre);outline-offset:2px}
 
 /* ============ drawer ============ */
@@ -252,6 +264,8 @@ table.t tr:last-child td{border-bottom:0}
 
 @media (max-width:640px){
   .brand .b2{display:none}
+  .burger{padding:0 9px;gap:7px}
+  .burger .btxt{font-size:12.5px}
   .main{padding:16px 13px 70px}
   .hero{min-height:min(58vh,380px);padding:22px 2px 26px}
   .two,.links{grid-template-columns:1fr}
@@ -288,8 +302,18 @@ table.t tr:last-child td{border-bottom:0}
   <button class="ibtn" id="searchBtn" type="button" aria-label="بحث">
     <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
   </button>
+  <div class="lang-wrap">
+    <button class="ibtn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="اللغة / Language">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.3 9.2h17.4M3.3 14.8h17.4"/></svg>
+    </button>
+    <div class="lang-pop" id="langPop" role="menu">
+      <button type="button" data-lang="ar" role="menuitem">العربية</button>
+      <button type="button" data-lang="en" role="menuitem">English</button>
+    </div>
+  </div>
   <button class="ibtn burger" id="menuBtn" type="button" aria-label="القائمة" aria-expanded="false">
-    <span></span><span></span><span></span>
+    <span class="bl"><span></span><span></span><span></span></span>
+    <span class="btxt"><span class="ar-only">القائمة</span><span class="en-only">Menu</span></span>
   </button>
 </header>
 
@@ -318,7 +342,6 @@ table.t tr:last-child td{border-bottom:0}
         <svg viewBox="0 0 24 24"><path d="M12 16.5 6.8 11.3l1.4-1.4 2.8 2.8V3h2v9.7l2.8-2.8 1.4 1.4L12 16.5zM5 20v-2h14v2H5z"/></svg>
         <span class="ar-only">تنزيل السيرة</span><span class="en-only">Download CV</span>
       </button>
-      <button class="hbtn" id="lang" type="button"><span class="ar-only">English</span><span class="en-only">العربية</span></button>
     </div>
     <div class="s-links">
       <a href="https://www.linkedin.com/in/nedhal-al-marhoon-3637b8249" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
@@ -870,7 +893,7 @@ table.t tr:last-child td{border-bottom:0}
   }
   document.getElementById('searchBtn').addEventListener('click',function(){ openSearch(true); });
   document.getElementById('searchClose').addEventListener('click',function(){ openSearch(false); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ openSearch(false); setMenu(false);} });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ openSearch(false); setMenu(false); popLang(false);} });
   function esc(s){ return s.replace(/[&<>]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
   q.addEventListener('input',function(){
     var v=q.value.trim().toLowerCase();
@@ -954,16 +977,31 @@ table.t tr:last-child td{border-bottom:0}
   var labels={a:['منسق إداري | مساعد إداري','Administrative Coordinator'],
               b:['أخصائي أول إدارة وعمليات','Senior Admin & Operations'],
               y1:['8 سنوات','8 years'], y2:['7 سنوات','7 years']};
-  document.getElementById('lang').addEventListener('click',function(){
-    var toEn=!document.body.classList.contains('lang-en');
+  var langBtn=document.getElementById('langBtn'), langPop=document.getElementById('langPop');
+  function setLang(toEn){
     document.body.classList.toggle('lang-en',toEn);
     document.documentElement.lang=toEn?'en':'ar';
     document.documentElement.dir=toEn?'ltr':'rtl';
     document.title=toEn?'Nedhal Mosa Almarhoon — Curriculum Vitae':'نضال موسى المرهون — السيرة الذاتية';
     q.placeholder=toEn?'Search the CV…':'ابحث في السيرة الذاتية…';
     for(var k in labels){ var el=document.querySelector('.lbl-'+k); if(el) el.textContent=labels[k][toEn?1:0]; }
-    setMenu(false);
+    langPop.querySelectorAll('button').forEach(function(b){
+      b.setAttribute('aria-current', b.dataset.lang===(toEn?'en':'ar') ? 'true' : 'false');
+    });
+  }
+  function popLang(open){
+    langPop.classList.toggle('on',open);
+    langBtn.setAttribute('aria-expanded', open?'true':'false');
+  }
+  langBtn.addEventListener('click',function(e){
+    e.stopPropagation(); setMenu(false); popLang(!langPop.classList.contains('on'));
   });
+  langPop.addEventListener('click',function(e){
+    var b=e.target.closest('button[data-lang]'); if(!b) return;
+    setLang(b.dataset.lang==='en'); popLang(false);
+  });
+  document.addEventListener('click',function(e){ if(!e.target.closest('.lang-wrap')) popLang(false); });
+  setLang(false);
 })();
 </script>
 </body>
